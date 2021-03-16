@@ -8,6 +8,10 @@ This action retrieve github releases and return their info.
 
 **Required** GitHub repo under `<owner>/<repo>` format.
 
+### `token`
+
+**Required** GitHub token to make authed request to GH APIs.
+
 ### `limit`
 
 **Required** How many releases to return. Default: 10.
@@ -28,4 +32,5 @@ The Releases data.
 uses: ctrlaltdev/get-releases-action@latest
 with:
   repo: ctrlaltdev/get-releases-action
+  token: ${{ secrets.GITHUB_TOKEN }}
 ```

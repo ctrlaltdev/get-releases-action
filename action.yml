@@ -17,7 +17,6 @@ inputs:
   token:
     description: 'GitHub Token'
     required: true
-    default: ${{ secrets.GITHUB_TOKEN }}
 outputs:
   releases:
     description: 'Releases data as JSON'
