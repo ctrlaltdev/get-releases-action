@@ -1,4 +1,5 @@
-name: 'Get GitHub Release'
+name: 'Get GitHub Release JSON'
+author: Yorick Demichelis
 description: 'Get GitHub Release Information from a Repository'
 inputs:
   repo:
@@ -19,7 +20,10 @@ inputs:
     default: ${{ secrets.GITHUB_TOKEN }}
 outputs:
   releases:
-    description: 'Releases data'
+    description: 'Releases data as JSON'
 runs:
   using: 'node12'
   main: 'dist/index.js'
+branding:
+  icon: 'box'
+  color: 'yellow'
