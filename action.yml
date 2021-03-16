@@ -1,0 +1,25 @@
+name: 'Get GitHub Release'
+description: 'Get GitHub Release Information from a Repository'
+inputs:
+  repo:
+    description: 'GitHub repo under <owner>/<repo> format'
+    required: true
+    default: 'ctrlaltdev/get-releases-action'
+  limit:
+    description: 'How many releases to return'
+    required: true
+    default: '10'
+  include_prerelease:
+    description: 'If prereleases should be included'
+    required: true
+    default: 'false'
+  token:
+    description: 'GitHub Token'
+    required: true
+    default: ${{ secrets.GITHUB_TOKEN }}
+outputs:
+  releases:
+    description: 'Releases data'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

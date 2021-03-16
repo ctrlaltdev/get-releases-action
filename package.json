@@ -1,0 +1,27 @@
+{
+  "name": "get-releases-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run lint",
+    "build": "ncc build src/main.js -m --license LICENSES",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "keywords": [],
+  "author": "yorick <yorick@ctrlalt.dev>",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0",
+    "eslint": "^7.22.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
+  }
+}
