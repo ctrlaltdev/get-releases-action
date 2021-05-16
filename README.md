@@ -7,6 +7,9 @@ This action retrieve github releases and return their info.
 ### `repo`
 
 **Required** GitHub repo under `<owner>/<repo>` format.
+### `fields`
+
+**Required** Fields to return in the json, comma separated. Default: name,tag_name.
 
 ### `token`
 

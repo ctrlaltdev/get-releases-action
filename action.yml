@@ -10,6 +10,10 @@ inputs:
     description: 'How many releases to return'
     required: true
     default: '10'
+  fields:
+    description: 'Fields to return in the json, comma separated'
+    required: true
+    default: 'name,tag_name'
   include_prerelease:
     description: 'If prereleases should be included'
     required: true

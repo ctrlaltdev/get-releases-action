@@ -3,6 +3,7 @@ const github = require('@actions/github')
 
 async function main () {
   try {
+    const fields = core.getInput('fields').replace(' ', '').split(',')
     const token = core.getInput('token')
     const [owner, repo] = core.getInput('repo').split('/')
     const limit = parseInt(core.getInput('limit'))
@@ -20,7 +21,15 @@ async function main () {
         page: i
       })
 
-      const rawleases = data.filter(r => includePrerelease ? !r.draft : !r.draft && !r.prerelease)
+      const rawleases = data
+        .filter(r => includePrerelease ? !r.draft : !r.draft && !r.prerelease)
+        .map(r => {
+          const release = {}
+          for (const field of fields) {
+            release[field] = r[field]
+          }
+          return release
+        })
 
       releases.push(...rawleases)
     }
