@@ -13,7 +13,7 @@
   "author": "yorick <yorick@ctrlalt.dev>",
   "license": "MPL-2.0",
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^1.2.7",
     "@actions/github": "^4.0.0"
   },
   "devDependencies": {
